@@ -1,0 +1,31 @@
+train_data: "../data/train.csv"
+test_data: "../data/test.csv"
+model_file: "../models/deliverytime_ridge.pkl"
+scores_file: "../results/metrics/model_metrics.json"
+predictions_file: "../results/predictions/predictions.csv"
+test_size: 0.2
+random_state: 42
+features:
+  - 'Delivery_person_Age'            
+  - 'Delivery_person_Ratings'        
+  - 'Restaurant_latitude'            
+  - 'Restaurant_longitude'           
+  - 'Delivery_location_latitude'     
+  - 'Delivery_location_longitude'    
+  - 'Type_of_order'                  
+  - 'Type_of_vehicle'                
+  - 'temperature'                    
+  - 'humidity'                       
+  - 'precipitation'                  
+  - 'weather_description'            
+  - 'Traffic_Level'                  
+  - 'Distance_km'   
+target: 'TARGET'
+
+model:
+  name: 'ridge'
+  params:
+    alpha: 5.0
+
+                 
+                         
